@@ -1,4 +1,5 @@
 var container = document.getElementById("jsoneditor");
+var jsondec = document.getElementById("jsondecrypted");
 var editor = new JSONEditor(container, {});
 window.e = editor;
 
@@ -9,6 +10,7 @@ function inb() {
     var s = document.getElementById("in").value;
     var j = inc(s, "a");
     window.e.set(JSON.parse(j));
+    jsondec = JSON.parse(j);
 }
 
 function outb() {
