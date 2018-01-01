@@ -10,7 +10,7 @@ function inb() {
     var s = document.getElementById("in").value;
     var j = inc(s, "a");
     window.e.set(JSON.parse(j));
-    jsondec = JSON.parse(j);
+    jsondec.value = JSON.parse(j).;
 }
 
 function outb() {
