@@ -19,6 +19,10 @@ function outb() {
     document.getElementById("in").value = j;
 }
 
+function refb() {
+    window.e.set(jsondec.value);
+}
+
 function inc(a, b) {
     if (b = 75 * b + "0") b = ":_." + b;
     var c = window.CryptoJS,
