@@ -5,6 +5,7 @@ window.e = editor;
 
 document.getElementById("i").onclick = inb;
 document.getElementById("o").onclick = outb;
+document.getElementById("r").onclick = refb;
 
 function inb() {
     var s = document.getElementById("in").value;
@@ -20,7 +21,10 @@ function outb() {
 }
 
 function refb() {
-    window.e.set(jsondec.value);
+    var s = jsondec.value;
+    var j = outc(s, "a");
+    document.getElementById("in").value = j;
+    window.e.set(JSON.parse(jsondec.value));
 }
 
 function inc(a, b) {
